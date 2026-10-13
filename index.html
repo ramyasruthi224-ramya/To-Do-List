@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="./sttyle.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="heading">
+            <h1>My To-Do List 📝</h1>
+            <button id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+
+        <p class="subtitle">Organize your day, one task at a time!</p>
+
+        <div class="task-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task..."
+                maxlength="200"
+            >
+
+            <input type="date" id="dueDate">
+
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedCount">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="pending">Pending</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">No tasks yet. Add your first task! 🎯</p>
+
+        <button id="clearCompleted">Clear Completed Tasks</button>
+
+        <p class="footer">Made with ❤️ to stay productive</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
